@@ -23,10 +23,24 @@ namespace 扑克牌2
         {
             listCard.Clear();
         }
-        //public void Dd()
-        //{
-        
-        //}
+        public void Dd()
+        {
+            string strCards = "";
+            for (int i = 0; i < listCard.Count; i++)
+            {
+                if (i == 0)
+                {
+                    strCards += listCard[i].Name;
+                }
+                else
+                {
+                    strCards += ", " + listCard[i].Name;
+                }
+           
+                
+            }
+            Console.Write("全部牌：{0}", strCards);
+        }
         public void Introduce()
         {
             string strCards = "";
@@ -46,6 +60,8 @@ namespace 扑克牌2
             Console.WriteLine("\r\n--------------------------------------------");
             Console.Write("我是{0}，", Name);
             Console.Write("我手中的扑克牌有{0}张:\r\n{1}\r\n", listCard.Count, strCards);
+           
         }
+      
     }
 }

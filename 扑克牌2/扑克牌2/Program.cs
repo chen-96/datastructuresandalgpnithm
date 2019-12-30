@@ -14,7 +14,7 @@ namespace 扑克牌2
             public static void TestPlay()
             {
                 //产生扑克牌
-                Console.WriteLine("正在生成扑克牌...");
+               
                 List<PaperCard> myCards = new List<PaperCard>();
                 string[] strType = { "红桃", "黑桃", "梅花", "方块" };
                 string[] strNumber = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
@@ -51,11 +51,13 @@ namespace 扑克牌2
                 //发牌
                 Console.WriteLine("开始发牌...");
                 List<User> listUser = new List<User>() {
-        new User("大师兄"),
-        new User("二师兄"),
-        new User("三师弟"),
-        new User("白龙马")
-    };
+                    new User("大师兄"),
+                    new User("二师兄"),
+                    new User("三师弟"),
+                    new User("白龙马")
+                };
+           
+           
 
                 while (stackCard.Count > 0)
                 {
@@ -64,13 +66,22 @@ namespace 扑克牌2
                         listUser[s].Add(stackCard.Pop());
                     }
                 }
-                Console.WriteLine("发牌完成！");
+
+           
 
 
-                //看牌
-                foreach (var item in listUser)
+
+            Console.WriteLine("发牌完成！");
+
+            foreach(var item in listUser)
+            {
+                item.Dd();
+            }
+            //看牌
+            foreach (var item in listUser)
                 {
                     item.Introduce();
+              
                 }
             }
         }
