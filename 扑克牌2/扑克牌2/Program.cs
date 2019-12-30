@@ -54,7 +54,7 @@ namespace 扑克牌2
                     new User("大师兄"),
                     new User("二师兄"),
                     new User("三师弟"),
-                    new User("白龙马")
+                    new User("小白")
                 };
            
            
