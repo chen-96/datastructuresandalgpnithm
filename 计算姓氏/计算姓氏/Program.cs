@@ -38,21 +38,21 @@ namespace 计算姓氏
         }
         public static void GetName(List<Person> persons)
         {
-            var result1 = from i in persons
+            var dd = from i in persons
                           where i.Name.Contains("欧阳")
                           group i by i.Name.Substring(0, 2)
                               into g
                               select new { g.Key, sum = g.Count() };
-            var result2 = from i in persons
+            var aa = from i in persons
                           where !i.Name.Contains("欧阳")
                           group i by i.Name.Substring(0, 1)
                               into g
                               select new { g.Key, sum = g.Count() };
-            foreach (var x in result2)
+            foreach (var x in dd)
             {
                 Console.Write("姓氏：{0}\t{1}人\n", x.Key, x.sum);
             }
-            foreach (var x in result1)
+            foreach (var x in aa)
             {
                 Console.Write("姓氏：{0}\t{1}人\n", x.Key, x.sum);
             }
